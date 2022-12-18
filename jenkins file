@@ -6,5 +6,10 @@ pipeline{
         git branch: 'main', url: 'https://github.com/PRASI999/test-code.git'
         }
           }
-            }
+          stage(unit test){
+            stepes{
+              sh 'mvn test'
+                    }
+                   }
+                 }
               }
