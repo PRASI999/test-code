@@ -11,5 +11,13 @@ pipeline{
               sh 'mvn test'
                     }
                    }
+                   stage(intigration testing){
+                     stepe{
+                      sh 'mvn verify -dskipunit tests'
                  }
               }
+              stage(maven build)
+                steps{
+                  sh 'clean install'
+            }
+          }
