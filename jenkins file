@@ -1,0 +1,10 @@
+pipeline{
+  agent any{
+    stages{
+      stage(scm checkout){
+        stepes{
+        git branch: 'main', url: 'https://github.com/PRASI999/test-code.git'
+        }
+          }
+            }
+              }
